@@ -25,7 +25,9 @@ pipeline {
             }
         }
         stage ('Destroy'){
-            sh "echo terraform destroy "
+            steps {
+                sh "echo terraform destroy "
+            }
         }
     }
 
