@@ -52,7 +52,7 @@ pipeline {
                 }
             }
             steps {
-                sh "echo terraform apply "
+                sh "terraform apply "
             }
         }
         stage ('Destroy'){
@@ -62,7 +62,7 @@ pipeline {
                 }
             }
             steps {
-                sh "echo terraform destroy "
+                sh "terraform destroy "
             }
         }
     }
