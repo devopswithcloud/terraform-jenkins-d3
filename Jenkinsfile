@@ -19,12 +19,12 @@ pipeline {
                 sh "terraform plan"
             }
         }
-        state ('Apply') {
+        stage ('Apply') {
             steps {
                 sh "echo terraform apply "
             }
         }
-        state ('Destroy'){
+        stage ('Destroy'){
             sh "echo terraform destroy "
         }
     }
