@@ -52,17 +52,19 @@ pipeline {
                 }
             }
             steps {
-                sh "terraform apply "
+                sh "terraform apply --auto-approve"
             }
         }
-        stage ('Destroy'){
+        stage ('Destroy'){           
+             // Eventually u should be having an approval here 
+            // input statemetn
             when {
                 expression {
                     params.action == 'destroy'
                 }
             }
             steps {
-                sh "terraform destroy "
+                sh "terraform destroy --auto-approve"
             }
         }
     }
