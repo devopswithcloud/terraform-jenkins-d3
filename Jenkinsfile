@@ -3,8 +3,8 @@ pipeline {
     agent any 
     parameters {
         choice (
-            name: 'action'
-            choices: 'apply\ndestroy'
+            name: 'action',
+            choices: 'apply\ndestroy',
             description: "Apply and destory the infra"
         )
     }
