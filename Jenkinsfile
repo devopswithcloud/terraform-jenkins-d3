@@ -11,6 +11,8 @@ pipeline {
         }
         stage ('Validation'){
             steps {
+                sh "whoami"
+                sh "pwd"
                 sh "terraform validate"
             }
         }
